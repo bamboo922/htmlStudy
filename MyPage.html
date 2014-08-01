@@ -1,0 +1,563 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script src="file:///C:/Documents%20and%20Settings/Administrator/%E6%A1%8C%E9%9D%A2/first/jquery-1.11.1.min.js"></script>
+<body>
+
+<h1 align="center">我的第一个网页</h1>
+<h2>2014.6.17</h2>
+  <a href="http://www.baidu.com">插入链接和图片</a>
+  <br>
+  <img src="1.jpg" width="300" weight="300">
+<hr/>
+<h2>2014.6.18</h2>
+  <p>通过bgcolor改变背景颜色并使标题移到中间</p>
+<hr/>
+<h2>2014.6.19</h2>
+  <em>段落（用br折行）</em>
+  <br/>
+  <strong>格式化（改变字体）</strong>
+  <br/>
+  <sub>编辑器（编写标记语言）</sub>
+<hr/>
+<h2>2014.6.20</h2>
+  <a href="http://www.baidu.com" style="text-decoration:none;color:white">通过style插入没有下划线的链接</a>
+  <p>通过style改变背景颜色和某一行字的颜色</p>
+
+  <head>
+  <style type="text/css">
+  h2 {color: blue}
+    .nameborder
+    {
+    border-width:1px;
+    border-style:solid;
+    border-color:black;
+    } 
+    button.haowai{color: red}
+    p.hu{color: green}
+    </style>
+  </head>
+  <p>用图像做链接（a href...;img border...)</p>
+  <a href="http://www.baidu.com">
+  <img border="1px" src="2.jpg" width="300" weight="300"></img>
+  </a>
+  <hr/>
+  <p>表格（用table)</p>
+  <table border="1" width="300" weight="300">
+  	<tr>
+  	  <th>家庭成员</th>
+      <th>年龄</th>
+    </tr>
+    <tr>
+      <td>老爸</td>
+      <td>70</td>
+    </tr>
+    <tr>
+      <td>老妈</td>
+      <td>60</td>
+    </tr>
+    <tr>
+      <td>老哥</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <td>嫂子</td>
+      <td>28</td>
+    </tr>
+    <tr>
+      <td>我</td>
+      <td>20</td>
+    </tr>
+  </tr>
+  </table>
+  <hr/>
+  <h4>无序列表（用ul）</h4>
+  <ul>
+   <li>酸奶</li>
+   <li>牛奶</li>
+   <li>龟苓膏</li>
+  </ul>
+<hr/>
+<h2>2014.6.21</h2>
+  <form>
+    姓名: 
+    <input type="text" name="姓名" />
+    <br />
+    年龄: 
+    <input type="text" name="年龄" />
+  </form>
+  <hr/>
+  <form>
+    <input type="radio" name="sex" value="男" /> 男
+    <br/>
+    <input type="radio" name="sex" value="女" /> 女
+  </form>
+  <hr/>
+  <body>
+     <iframe src="家族.html" width="300" weight="300"></iframe>
+  </body>
+  <body background="6.jpg">
+<hr/>
+<h2>2014.6.27</h2>
+  <title>我的第一个网页</title>
+  <head>
+     <meta name="陈昱竹" content="我的网页.html">
+     <meta name="keywords" content="第一个" />
+  </head>
+  <script type="text/javascript">
+  document.write("脚本")
+  </script>
+  <noscript>不支持脚本</noscript>
+
+<hr/>
+<h2>2014.6.28</h2>
+  <script type="text/javascript">
+    document.write("今天去医院看膝盖扭伤")
+  </script>
+  <br>
+  <button type="button" class="haowai" onclick="alert('注意陷阱！街头的旧手机换菜刀，换碗！谨慎！\n恭喜东方智慧猎头公司开张大吉!')">注意！注意！号外！号外！</button>
+  <p id="demo" class="hu">湖工商贸</p>
+  <hr/>
+  <script type="text/javascript">
+   //加号连接变量与其他代码
+    var x;
+     x=5;
+    var y=3
+    var z=x*y
+    var 哥哥="陈鹏飞"
+
+    document.write(x + "<button type=\"button\" class=\"haowai\" onclick=\"alert(\'注意陷阱！街头的旧手机换菜刀，换碗！谨慎！\n恭喜东方智慧猎头公司开张大吉!\')\">注意！注意！号外！号外！</button>");
+    document.write(y + "<br>");
+    document.write(z + "<br>");
+    document.write("陈昱竹<br>"+"妈妈"+哥哥)
+  </script>
+  <button type="button" class="haowai" onclick="alert('注意陷阱！街头的旧手机换菜刀，换碗！谨慎！\n恭喜东方智慧猎头公司开张大吉!')">注意！注意！号外！号外！</button>
+<script type="text/javascript">
+function myFunction()
+{
+  //两个demo都运行啦，速度很快，只看到第二个
+document.getElementById("demo").innerHTML="陈昱竹";
+//document.getElementById("demo").innerHTML="我的膝盖好啦";
+}
+</script>
+<p>
+<button type="button" onclick="myFunction()">点击这里</button>
+</p>
+<hr>
+<h2>2014.6.29</h2>
+  <script>
+    var carname="牛奶";
+    var answer='酸奶';
+    var x=11e1;
+    var y=123e-2
+    
+    document.write(carname + "<br>")
+    document.write(answer + "<br>")
+    document.write(x + "<br>")
+    document.write(y + "<br>")
+  </script>
+  <hr>
+  <script type="text/javascript">
+    var cars=new Array();
+    cars[0]="Audi";
+    cars[1]="BMW";
+    cars[2]="Volvo";
+    for (i=0;i<cars.length;i++)
+    {
+    document.write(cars[i] + "<br>");
+    }
+  </script>
+  <hr>
+  <script>
+    var person={
+    firstname : "Bill",
+    lastname  : "Gates",
+    id        :  5566
+    };
+    document.write(person.firstname + "<br />");
+    document.write(person.lastname + "<br />");
+  </script>
+  <hr>
+  <script type="text/javascript">
+    person=new Object();
+    person.firstname="chen";
+    person.lastname="yuzhu";
+    person.age=18;
+    person.eyecolor="black";
+    person.hight=158;
+    document.write(person.firstname + " is " + person.age + " years old" +  person.hight);
+  </script>
+  <hr>
+  <br>
+  <button onclick="myFunction('chen','student','18')">点击这里</button>
+  <script type="text/javascript">
+    //function myFunction(name,job,age)
+    {
+      //alert("Welcome " + name + ", the " + job + ", is " + age +" years old.")
+    }
+  </script>
+<h2>2014.7.13</h2>
+  <p id="tj"></p>
+  <button type="button" onclick="tiaojian1()">1</button>
+  <script type="text/javascript">
+    function tiaojian1()
+    {
+      var x=9;
+      if (x>5) 
+      {
+        t="good";
+      }
+     document.getElementById("tj").innerHTML=t;
+    } 
+  </script>
+  <br>
+  <button type="button" onclick="tiaojian2()">2</button>
+  <script type="text/javascript">
+    function tiaojian2()
+    {
+      var x=6;
+      if (x>5) 
+        {
+          t="mama";
+        } 
+      else
+        {
+          t="baba"
+        }
+      document.getElementById("tj").innerHTML=t;
+    }
+  </script>
+  <br>
+  <button type="button" onclick="tiaojian3()">3</button>
+  <script type="text/javascript">
+    function tiaojian3()
+    {
+      var x=6;
+      if (x<5) 
+        {
+          t="yuzhu";
+        } 
+      else if (x>8) 
+        {
+          t="pengfei"; 
+        }
+      else
+        {
+          t="didi";
+        }
+      document.getElementById("tj").innerHTML=t;
+    }
+  </script>
+  <br>
+  <button type="button" onclick="tiaojian4()">4</button>
+  <script type="text/javascript">
+    function tiaojian4()  
+    {
+      switch(2)
+      {
+      case 1:
+        x="baba";
+        break;
+      case 2:
+        x="mama";
+        break;
+      case 3:
+        x="wo";
+        break;
+      default:
+        x="ge";
+      }
+      document.getElementById("tj").innerHTML=x;  
+    }
+  </script>
+  <br>
+  <script>
+    t=["laoba","laoma","laoge","saozi","wo"];
+    for (var i=0;i<5;i++)
+    {
+    document.write(t[i] + "<br>");
+    }
+  </script>
+  <br>
+  <button type="button" onclick="tiaojian5()">5</button>
+  <script type="text/javascript">
+    function tiaojian5()
+    {
+      var x="",i=1;
+      while(i<5)
+      {
+        x=x+"the number is"+i+"<br>";
+        i++;
+      }
+      document.getElementById("tj").innerHTML=x; 
+    }
+  </script>
+  <br>
+<h2>2014.7.20</h2>
+  <p id="yuansu">陈昱竹</p>
+  <script type="text/javascript">
+  x=document.getElementById("yuansu");
+  document.write("yuansu段落文本是:"+x.innerHTML)
+  //通过yuansu的id获得“陈昱竹”
+  </script>
+
+  <div id="yuansu2">
+    <h3>计算器</h3>
+  </div>
+  <script type="text/javascript">
+  var z=document.getElementsByTagName("h3");
+  document.write('id 为 "yuansu2" 的 div 中的第一段文本是:' + z[0].innerHTML);
+  //通过标签名yuansu2获得“计算器”
+  </script>
+  <br>
+  <script type="text/javascript">
+  document.getElementById("yuansu").innerHTML="眼镜"
+  //通过yuansu的id改变文档内容
+  </script>
+  <br>
+  <img id="image" src="1.jpg" width="300" weight="300">
+  <script type="text/javascript">
+  document.getElementById("image").src="2.jpg"
+  //通过改变src属性改变图片
+  </script>
+  <br>
+  <h2 id="yanse">变颜色</h2>
+  <script type="text/javascript">
+  document.getElementById("yanse").style.color="green";
+  //通过此语法改变字的颜色
+  </script>
+  <br>
+  <h3 onclick="document.getElementById('yanse').style.color='red'; ">请点击</h3>
+  <br>
+  <div id="fuyuansu">
+    <p id="ziyuansu1">这是一个段落。</p>
+    <p id="ziyuansu2">这是另一个段落。</p>
+  </div>
+  <script>
+    var fuyuansu=document.getElementById("fuyuansu");
+    var ziyuansu=document.getElementById("ziyuansu1");
+    fuyuansu.removeChild(ziyuansu);
+    //通过父元素删除子元素，父元素与子元素是相对而言的
+  </script>
+<h2>2014.7.22</h2>
+  <script type="text/javascript">
+    function person(firstname,lastname) 
+    //只创建函数，没有使用 
+    {
+      this.firstname=firstname;  //在person对象中添加内容
+      this.lastname=lastname;
+
+      this.xingming=xingming;
+      function xingming(name)
+      {
+        this.firstname=name;
+      }
+    }
+    wo=new person("chen","yuzhu"); //创建空对象，添加参数 然后执行函数  属性初始化
+    wo.xingming("fang");
+    document.write(wo.firstname);
+  </script>
+  <br>
+  <button onclick="wo()">我</button>
+  <p id="mingzi"></p>
+  <script type="text/javascript">
+    function wo()
+    {
+      var x;
+      var t="";
+      var person={firstname:"chen",lastname:"yuzhu"};
+
+      for(x in person)
+        {
+          t=t+person[x];//x取firstname，person[firstname]=chen , t=t+"chen"  x取lastname,person[lastname]=yuzhu, t="chen"+"yuzhu"
+
+        }
+      document.getElementById("mingzi").innerHTML=t;
+    }
+  </script>
+  <br>
+  <script type="text/javascript">
+    var y;
+    y=123e-2; //小数点往前移两位
+    document.write(y);
+  </script>
+  <br>
+  <script type="text/javascript">
+    var txt="chenyuzhu";
+    document.write(txt.length+"<br>"); //字符串长度
+    document.write(txt.toUpperCase()); //变大写
+  </script>
+  <br>
+  <script type="text/javascript">
+    var myDate=new Date() ;
+    myDate.setFullYear(2014,6,22); //月份从0开始
+    document.write(myDate);
+  </script>
+<h2>2014.7.23</h2>
+  <script type="text/javascript">
+    document.write(screen.availHeight+"<br>"); //屏幕可用高度
+    document.write(screen.availWidth);
+          //可用宽度
+  </script>
+  <br>
+  <script>
+    document.write(location.href);
+  </script>
+  <br>
+  <script>
+    document.write(location.pathname);
+  </script>
+  <br>
+  <script>
+    function xinwangye()
+    {
+      window.location.assign("http://www.w3school.com.cn")
+       // 在本页面打开
+    }
+  </script>
+  <input type="button" value="新网页" onclick="xinwangye()" style="color:red">
+  <a href="http://www.w3school.com.cn" >链接</a> 
+   <!--可在另一窗口打开-->
+<h2>2014.7.24</h2>
+  <script type="text/javascript">
+    function goBack()
+     {
+       window.history.back();  //后退
+     }
+  </script>
+  <input type="button" value="后" onclick="goBack()">
+  <script type="text/javascript">
+    function goForward()
+     {
+       window.history.forward();  //前进
+     }
+  </script>
+  <input type="button" value="前" onclick="goForward()">
+  <script type="text/javascript">
+    function jinggaokuang()
+    {
+      alert("出现错误")
+      alert("添加" + '\n' + "折行")
+    }
+  </script>
+  <button onclick="jinggaokuang()">警告框</button>
+
+  <script type="text/javascript">
+    function querenkuang()
+    {
+      var a=confirm("点击 '取消' ");
+      if (a==true) 
+        {
+          alert("恭喜");
+        }
+      else
+        {
+          alert("抱歉");
+        }
+    }
+  </script>
+  <button onclick="querenkuang()">确认框</button>
+
+  <script type="text/javascript">
+    function tishikuang()
+    {
+      var name=prompt("请输入您的名字")
+      if (name!="")
+       {
+         document.write("你好！" + name + " 今天过得怎么样？")
+       }
+    }
+  </script>
+  <button onclick="tishikuang()">提示框</button>
+
+  <script type="text/javascript">
+    function jishi()
+    {
+      var t=setTimeout("alert('正确')",2000)
+    }
+  </script>
+  <button onclick="jishi()">计时</button>
+<h2>2014.7.27</h2>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $("#yincangxianshi").click(function(){
+        $("p1").toggle(3000);
+      });
+    });
+  </script>
+  <button id="yincangxianshi">隐藏显示</button>
+  <p1>这是一段文字</p1>
+  <br>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $("#danrudanchu").click(function(){
+        $("div").fadeToggle(3000);
+      });
+    });
+  </script>
+  <button id="danrudanchu">淡入淡出</button>
+  <div style="width:70px;height:70px;background-color:red;"></div>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $("#dianji").click(function(){
+        $("#huadong").slideToggle(3000);
+      });
+    });
+  </script>
+  <div1 id="huadong">
+    <p>滑动</p>
+  </div1>
+  <p id="dianji">点击</p>
+
+  <script>
+    $(document).ready(function(){
+      $("button").click(function(){
+        $("#p2").css("color","red").slideUp(2000).slideDown(2000);
+      });
+    });
+  </script>
+  <h3 id="p2">啦啦啦</h3>
+  <button>点击这里</button>
+ 
+  
+  
+  
+  
+
+
+
+  
+
+
+
+
+
+  
+  
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

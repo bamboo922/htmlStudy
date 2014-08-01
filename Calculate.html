@@ -1,0 +1,253 @@
+<html>
+<body>
+
+  <style type="text/css">
+  input{color:blue;}
+  div {height:15px;width:160px;}
+  
+  </style>
+
+  <table border="1"  align="center">
+  <tr>
+   	  <td>
+   	  	<div id="num" align="right" >
+        </div>
+   	  </td>
+   	</tr>
+    <tr>
+      <td>
+        <div id="fuhao" align="left" >
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div id="2num" align="right" >
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div id="jieguo" align="right">
+        </div>
+      </td>
+    </tr>
+    <tr>
+   	  <td>
+        <input type="button" onclick="shuzi1()" value="1" 
+        style="width:35px;height: 35px;" />
+        <input type="button" onclick="shuzi2()" value="2" style="width:35px;height: 35px;" />
+        <input type="button" onclick="shuzi3()" value="3" style="width:35px;height: 35px;" />
+        <input type="button" onclick="jia()" value="+" style="width:35px;height: 35px; color:red;"  />
+   	  </td>
+   	</tr>
+   	<tr>
+   	  <td>
+   	  	<input type="button" onclick="shuzi4()" value="4" style="width:35px;height: 35px;" />
+   	  	<input type="button" onclick="shuzi5()" value="5" style="width:35px;height: 35px;" />
+   	  	<input type="button" onclick="shuzi6()" value="6" style="width:35px;height: 35px;" />
+   	  	<input type="button" onclick="jian()" value="-" style="width:35px;height: 35px; color:red;" />
+   	  </td>
+   	</tr>
+   	<tr>
+   	  <td>
+   	  	<input type="button" onclick="shuzi7()" value="7" 
+        style="width:35px;height: 35px;" />
+   	  	<input type="button" onclick="shuzi8()" value="8" 
+        style="width:35px;height: 35px;" />
+   	  	<input type="button" onclick="shuzi9()" value="9" 
+        style="width:35px;height: 35px;" />
+   	  	<input type="button" onclick="cheng()" value="*" 
+        style="width:35px;height: 35px; color:red;" />
+   	  </td>
+   	</tr>
+   	<tr>
+   	  <td>
+        <input type="button" onclick="shuzi0()" value="0" 
+        style="width:35px;height: 35px;" />
+   	  	<input type="button" onclick="qingling()" value="C" 
+        style="width:35px;height: 35px; color:red;" />
+   	  	<input type="button" onclick="dengyu()" value="=" 
+        style="width:35px;height: 35px; color:red;" />
+   	  	<input type="button" onclick="chu()" value="/" 
+        style="width:35px;height: 35px; color:red;" />
+   	</td>
+   </tr>
+  </table>
+
+   <script type="text/javascript">
+    youfuhao=false;
+   function shuzishuru(number)
+    {
+       if(youfuhao==true)
+       {
+        cup1=document.getElementById("2num").innerHTML;
+        cup2=cup1+number;
+        document.getElementById("2num").innerHTML=cup2;
+        cupA=parseInt(cup2); 
+        }
+        else
+        {
+        cup1=document.getElementById("num").innerHTML;
+        cup2=cup1+number;
+        document.getElementById("num").innerHTML=cup2;
+        cupA=parseInt(cup2); 
+        }//把字符转为数字
+    }
+   </script>
+
+   
+
+  <script type="text/javascript">
+   function fuhaoshuru(yunsuanfuhao)
+    {
+      fuhao=yunsuanfuhao;//把+-*/存入变量fuhao
+       cupB=cupA;
+       youfuhao=true;
+      document.getElementById("fuhao").innerHTML=yunsuanfuhao;
+      //符号在另一框中显示
+    }  
+   </script>
+
+
+   
+   <script type="text/javascript">
+    function shuzi1()
+      {
+        shuzishuru("1"); //调用函数，1作为参数赋予函数
+      }
+   </script>
+   <script type="text/javascript">
+      function shuzi2()
+      {
+      shuzishuru("2"); 
+      
+      }
+   </script>
+   <script type="text/javascript">
+      function shuzi3()
+      {
+     shuzishuru("3");
+      
+      }
+   </script>
+   <script type="text/javascript">
+      function shuzi4()
+      {
+      shuzishuru("4"); 
+      
+      }
+   </script>
+   <script type="text/javascript">
+      function shuzi5()
+      {
+      shuzishuru("5"); 
+      
+      }
+   </script>
+   <script type="text/javascript">
+      function shuzi6()
+      {
+     shuzishuru("6"); 
+     
+      }
+   </script>
+
+   <script type="text/javascript">
+      function shuzi7()
+      {
+      shuzishuru("7"); 
+    
+      }
+   </script>
+   <script type="text/javascript">
+      function shuzi8()
+      {
+      shuzishuru("8"); 
+      
+     }
+   </script>
+   <script type="text/javascript">
+      function shuzi9()
+      {
+      shuzishuru("9");  
+       
+      } 
+   </script>
+   <script type="text/javascript">
+      function shuzi0()
+      {
+      shuzishuru("0"); 
+      
+      } 
+   </script>
+   <script type="text/javascript">
+      function qingling()
+      {
+      document.getElementById("num").innerHTML="";
+      document.getElementById("fuhao").innerHTML="";
+      document.getElementById("jieguo").innerHTML="";
+      }
+   </script>
+
+
+   <script type="text/javascript">
+    function jia()
+    {
+      fuhaoshuru("+");  //调用函数，+作为参数使用
+    }
+   </script>
+   <script type="text/javascript">
+    function jian()
+    {
+      fuhaoshuru("-");
+    }
+   </script>
+   <script type="text/javascript">
+     function cheng()
+    {
+      fuhaoshuru("*");
+    }
+   </script>
+   <script type="text/javascript">
+    function chu()
+      {
+        fuhaoshuru("/");
+      }
+   </script>
+
+
+   <script type="text/javascript">
+      function dengyu()
+      {
+        youfuhao=false;
+      if (fuhao=="+") 
+        {
+          t=parseInt(cupA)+parseInt(cupB); 
+          //当符号为加号时，做加法
+        } 
+      else if (fuhao=="-") 
+        {
+          t=parseInt(cupB)-parseInt(cupA);
+        }
+      else if (fuhao=="*") 
+        {
+          t=parseInt(cupA)*parseInt(cupB);
+        }
+      else if (fuhao=="/") 
+        {
+          t=parseInt(cupB)/parseInt(cupA);  
+        }
+      document.getElementById("jieguo").innerHTML=t;
+      }
+  </script>
+
+
+
+
+
+
+
+
+</body>
+</html>
