@@ -134,9 +134,38 @@ h2{color: blue}
   <div id="b2" style="width:80px;height:80px;background-color:red;">
   	<p >子元素</p>
   </div>
-  	
-  
   <button id="h4">删除子元素</button>
+  <br>
+
+  <script>
+    $(document).ready(function(){
+      $("#tianjiashanchu").click(function(){
+        $("p2,p3,p5,p6,b1,p").toggleClass("green");
+      });
+     });
+  </script>
+  <style type="text/css">
+    .green
+    {
+     color: green;
+    }
+  </style>
+  <button id="tianjiashanchu">添加与删除类</button>
+  <br>
+
+  <script>
+    $(document).ready(function(){
+      $("#h5").click(function(){
+        $("p7").css({"background-color":"yellow","font-size":"200%"});
+      });
+    });
+  </script>
+  <p7>这是一个段落</p7>
+  <button id="h5">设置背景色</button>
+  
+
+
+
   
   
 
