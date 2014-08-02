@@ -444,14 +444,15 @@ document.getElementById("demo").innerHTML="陈昱竹";
   <script type="text/javascript">
     function querenkuang()
     {
+      //当用户点击确认或取消是才能继续操作
       var a=confirm("点击 '取消' ");
       if (a==true) 
         {
-          alert("恭喜");
+          alert("恭喜"); //点确认时，返回true
         }
       else
         {
-          alert("抱歉");
+          alert("抱歉"); //点取消时，返回false
         }
     }
   </script>
@@ -461,10 +462,12 @@ document.getElementById("demo").innerHTML="陈昱竹";
     function tishikuang()
     {
       var name=prompt("请输入您的名字")
+      //弹框中有个表单，表单中的字为返回值，点确认或取消才能继续操作
       if (name!="")
        {
          document.write("你好！" + name + " 今天过得怎么样？")
        }
+       //若不填，返回null
     }
   </script>
   <button onclick="tishikuang()">提示框</button>
@@ -473,106 +476,9 @@ document.getElementById("demo").innerHTML="陈昱竹";
     function jishi()
     {
       var t=setTimeout("alert('正确')",2000)
+      //在某个时间后才执行代码
     }
   </script>
   <button onclick="jishi()">计时</button>
-
-
-<h2>2014.7.27</h2>
-  <script type="text/javascript">
-    $(document).ready(function(){
-      $("#yincangxianshi").click(function(){
-        $("p1").toggle(3000);
-      });
-    });
-  </script>
-  <button id="yincangxianshi">隐藏显示</button>
-  <p1>这是一段文字</p1>
-  <br>
-
-  <script type="text/javascript">
-    $(document).ready(function(){
-      $("#danrudanchu").click(function(){
-        $("div").fadeToggle(3000);
-      });
-    });
-  </script>
-  <button id="danrudanchu">淡入淡出</button>
-  <div>
-    <img src="1.jpg" width="300" weight="300">
-  </div>
-
-  <button id="lianxu">点击这里</button>
-  <br>
-  <script>
-    $(document).ready(function(){
-      $("#lianxu").click(function(){
-        $("div2").slideUp(2000).slideDown(2000);
-      });
-    });
-  </script>
-  <div2>
-    <img src="2.jpg" width="300" weight="300">
-  </div2>
-  
-<h2>2014.8.1</h2>
-  <button id="div3">移动</button>
-  <br>
-  <script type="text/javascript">
-    $(document).ready(function(){
-      $("#div3").click(function(){
-        $("div3").animate({
-          left:'250px',
-          opacity:'0.5',
-          height:'150px',
-          width:'150px'
-        });  
-      });
-    });
-  </script>
-  <div3 style="width:80px; height:80px; background-color:red; position:absolute">
-  </div3>
-  
-
-
-  
-  
-  
-  
-
-
-
-
-
-
-
-
-
-  
-  
-
-  
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </body>
 </html>
