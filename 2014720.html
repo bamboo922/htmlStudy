@@ -1,0 +1,50 @@
+<html>
+<body>
+	<h2>2014.7.20</h2>
+  <p id="yuansu">陈昱竹</p>
+  <script type="text/javascript">
+  x=document.getElementById("yuansu");
+  document.write("yuansu段落文本是:"+x.innerHTML)
+  //通过yuansu的id获得“陈昱竹”
+  </script>
+
+  <div id="yuansu2">
+    <h3>计算器</h3>
+  </div>
+  <script type="text/javascript">
+  var z=document.getElementsByTagName("h3");
+  document.write('id 为 "yuansu2" 的 div 中的第一段文本是:' + z[0].innerHTML);
+  //通过标签名yuansu2获得“计算器”
+  </script>
+  <br>
+  <script type="text/javascript">
+  document.getElementById("yuansu").innerHTML="眼镜"
+  //通过yuansu的id改变文档内容
+  </script>
+  <br>
+  <img id="image" src="1.jpg" width="300" weight="300">
+  <script type="text/javascript">
+  document.getElementById("image").src="2.jpg"
+  //通过改变src属性改变图片
+  </script>
+  <br>
+  <h2 id="yanse">变颜色</h2>
+  <script type="text/javascript">
+  document.getElementById("yanse").style.color="green";
+  //通过此语法改变字的颜色
+  </script>
+  <br>
+  <h3 onclick="document.getElementById('yanse').style.color='red'; ">请点击</h3>
+  <br>
+  <div id="fuyuansu">
+    <p id="ziyuansu1">这是一个段落。</p>
+    <p id="ziyuansu2">这是另一个段落。</p>
+  </div>
+  <script>
+    var fuyuansu=document.getElementById("fuyuansu");
+    var ziyuansu=document.getElementById("ziyuansu1");
+    fuyuansu.removeChild(ziyuansu);
+    //通过父元素删除子元素，父元素与子元素是相对而言的
+  </script>
+</body>
+</html>
