@@ -132,7 +132,7 @@ h2{color: blue}
   <button id="h3">删除元素</button>
   <br>
   <div id="b2" style="width:80px;height:80px;background-color:red;">
-  	<p >子元素</p>
+  	<p>子元素</p>
   </div>
   <button id="h4">删除子元素</button>
   <br>
@@ -162,6 +162,19 @@ h2{color: blue}
   </script>
   <p7>这是一个段落</p7>
   <button id="h5">设置背景色</button>
+
+<h2>2014.8.6</h2>
+  <script>
+    $(document).ready(function(){
+      $("#gain").click(function(){
+        $("#out").load("/陈昱竹/workspace/firstpage/AJAX.txt",function(){
+          alert("外部文件加载成功");
+        });
+      });
+    });
+  </script>
+  <h3 id="out">外部文件</h3>
+  <button id="gain">获得外部的内容</button>
   
 
 

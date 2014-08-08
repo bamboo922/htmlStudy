@@ -1,0 +1,77 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; 
+charset=utf-8">
+<script src="file:///E:/%E9%99%88%E6%98%B1%E7%AB%B9/workspace/firstpage/jquery-1.11.1.min.js"></script>
+<body>
+
+<h2>2014.8.5</h2>
+  <style>
+    .traversal *
+    { 
+    display: block;
+    border: 2px solid grey;
+    color: green;
+    padding: 5px;
+    margin: 15px;
+    }
+  </style>
+
+  <script>
+    $(document).ready(function(){
+      $("li1").parent().css({"color":"red","border":"2px solid yellow"});
+      $("ul2").children().css({"color":"blue","border":"2px solid purple"});
+      $("span3").nextUntil("h6").css({"color":"black","border":"2px solid brown"});
+    });
+  </script>
+
+  <div1>
+    <div class="traversal" style="width:500px;">div (曾祖父)
+      <ul1>ul (祖父)  
+        <li1>li (直接父)
+          <span1>span</span1>
+        </li1>
+      </ul1>   
+    </div>
+  </div1>
+  <br>
+
+  <div2>
+    <div class="traversal" style="width:500px;">div (曾祖父)
+      <ul2>ul (祖父)  
+        <li2>li (直接父)
+          <span2>span</span2>
+        </li2>
+      </ul2>   
+    </div>
+  </div2>
+  <br>
+
+  <div3 >
+  	<div class="traversal" style="width:500px;">div (曾祖父)
+      <ul3>ul (祖父)  
+        <li3>li (直接父)
+          <span3>span</span3>
+          <p>p</p>
+          <h6>888</h6>
+        </li3>
+      </ul3>   
+    </div>
+  </div3>
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+</body>
+</html>

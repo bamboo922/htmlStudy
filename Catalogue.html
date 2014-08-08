@@ -4,21 +4,31 @@
 <body>
 
   <style type="text/css">
-  button{border:0 ;background:#FFFFFF;}
+  button
+   {
+    border:0 ;
+    background:#FFFFFF;
+   }
   </style>
 
   <script>
     function date(buttonTextContent)//形式参数
     {
     buttonDate=buttonTextContent;//把按钮上的值赋给buttonDate
-    pageDate=buttonDate.replace(".","");
+    a=self.parent.frames["right"];
+    b=a.frames["up"];
+    c=b.contentDocument;
+
+
+    pageDate=buttonDate.replace(".","").replace(".","");
     pageName=pageDate+".html"; 
 
-    self.parent.frames["right"].location=pageName;
+    self.parent.frames["right"].frames["down"].location=pageName;
+    
     //引用右边的框架，并显示网页
     }
   </script>
-  
+
   <button id="b1">+</button>
   <b>HTML</b>
   <br>
@@ -30,16 +40,17 @@
     });
   </script>
 
-  <div1 style="display:none;">
-    <button onclick="date(this.textContent)">2014.617</button>
+  <div1 style="display:none;" >
+    <button onclick="date(this.textContent)">2014.6.17</button>
+    <!--把字符串变成代码运行-->
     <br>
-    <button onclick="date(this.textContent)">2014.618</button>
+    <button onclick="date(this.textContent)">2014.6.18</button>
     <br>
-    <button onclick="date(this.textContent)">2014.619</button>
+    <button onclick="date(this.textContent)">2014.6.19</button>
     <br>
-    <button onclick="date(this.textContent)">2014.620</button>
+    <button onclick="date(this.textContent)">2014.6.20</button>
     <br>
-    <button onclick="date(this.textContent)">2014.621</button>
+    <button onclick="date(this.textContent)">2014.6.21</button>
   </div1>
   <br>
 
@@ -55,22 +66,21 @@
   </script>
 
   <div2 style="display:none;">
-    <button onclick="date(this.textContent)">2014.627</button>
-    <!--把字符串变成代码运行-->
+    <button onclick="date(this.textContent)">2014.6.27</button>
     <br>
-    <button onclick="date(this.textContent)">2014.628</button>
+    <button onclick="date(this.textContent)">2014.6.28</button>
     <br>
-    <button onclick="date(this.textContent)">2014.629</button>
+    <button onclick="date(this.textContent)">2014.6.29</button>
     <br>
-    <button onclick="date(this.textContent)">2014.713</button>
+    <button onclick="date(this.textContent)">2014.7.13</button>
     <br>
-    <button onclick="date(this.textContent)">2014.720</button>
+    <button onclick="date(this.textContent)">2014.7.20</button>
     <br>
-    <button onclick="date(this.textContent)">2014.722</button>
+    <button onclick="date(this.textContent)">2014.7.22</button>
     <br>
-    <button onclick="date(this.textContent)">2014.723</button>
+    <button onclick="date(this.textContent)">2014.7.23</button>
     <br>
-    <button onclick="date(this.textContent)">2014.724</button>
+    <button onclick="date(this.textContent)">2014.7.24</button>
   </div2>
   <br>
 
@@ -86,18 +96,15 @@
   </script>
 
   <div3 style="display:none;">
-    <button onclick="date(this.textContent)">2014.81</button>
+    <button onclick="date(this.textContent)">2014.8.1</button>
     <br>
-    <button  onclick="date(this.textContent)">2014.82</button>
+    <button onclick="date(this.textContent)">2014.8.2</button>
+    <br>
+    <button onclick="date(this.textContent)">2014.8.5</button>
+    <br>
+    <button onclick="date(this.textContent)">2014.8.6</button>
+    <br>
   </div3>
 
-
-
-
-
-
-
-  
-  
 </body>
 </html>
