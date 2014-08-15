@@ -1,0 +1,69 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<body>
+
+<style type="text/css">
+   div {height:15px;width:160px;}
+  form {height:20px;width:160px;}
+</style>
+
+
+<b>输入字符串：</b>
+<form >
+  <input type="text" name="shuru" id="shuru" />
+</form>
+<b>显示字符串：</b>
+<table border="1">
+  <tr>
+   	<td>
+      <div id="xianshi"></div>
+   	</td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  function removespace()
+  {
+    youspace=document.getElementById("shuru").value;
+    wuspace=youspace.replace(/ /g,"");
+    document.getElementById("xianshi").innerHTML=wuspace;
+  }
+</script>
+<button onclick="removespace()">去除空格</button>
+<br>
+
+
+<script type="text/javascript">
+  function reverse()
+  {
+    order=document.getElementById("shuru").value;
+    fanzhuan="";
+    for(i=0;i<order.length;i++)
+    {
+     fanzhuan=order[i]+fanzhuan;
+    }
+    document.getElementById("xianshi").innerHTML=fanzhuan;
+  }
+</script>
+<button onclick="reverse()">反转</button>
+<br>
+
+<script type="text/javascript">
+  function findmode()
+  {
+    string=document.getElementById("shuru").value;
+    space="";
+    for(i=0;i<string.length;i++)
+    {
+     mode=space+string[i];
+    }
+    document.getElementById("xianshi").innerHTML=mode;
+  } 
+</script>
+<button onclick="findmode()">出现次数最多的</button>
+
+
+
+
+</body>
+</html>
