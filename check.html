@@ -3,15 +3,33 @@
 <body>
 
 <style type="text/css">
-   div {height:15px;width:160px;}
-  form {height:20px;width:160px;}
+   div {height:25px;width:160px;}
 </style>
 
 
 <b>输入字符串：</b>
-<form >
-  <input type="text" name="shuru" id="shuru" />
-</form>
+<table border="1">
+  <tr>
+    <td>
+      <div id="change1">
+        <input name="shuru" id="shuru">
+      </div>
+    </td>
+  </tr>
+</table>
+<br>
+
+<table border="1">
+  <tr>
+    <td>
+      <div id="change2">
+        <input name="shuru2" id="shuru2">
+      </div>
+    </td>
+  </tr>
+</table>
+<br>
+
 <b>显示字符串：</b>
 <table border="1">
   <tr>
@@ -20,6 +38,9 @@
    	</td>
   </tr>
 </table>
+<br>
+
+
 
 <script type="text/javascript">
   function removespace()
@@ -40,7 +61,6 @@
     fanzhuan="";
     for(i=order.length-1;i>=0;i--)
     {
-     //fanzhuan=order[i]+fanzhuan;
      fanzhuan=fanzhuan+order[i];
     }
     document.getElementById("xianshi").innerHTML=fanzhuan;
@@ -48,6 +68,7 @@
 </script>
 <button onclick="reverse()">反转</button>
 <br>
+
 
 <script type="text/javascript"> 
   function findmode()
@@ -73,6 +94,7 @@
 <button onclick="findmode()">出现次数最多的</button>
 <br>
 
+
 <script type="text/javascript"> 
   function removerepeat()
   {
@@ -92,15 +114,64 @@
             eval("newstring = str.replace(/"+letter+"/g,'')"); 
           }   
       }
-    //eval("newstring = str.replace(/"+letter+"/g,'')"); 
     document.getElementById("xianshi").innerHTML=newstring; 
   }   
 </script>   
 <button onclick="removerepeat()">去除重复的字符</button>
+<br>
 
 
+<script type="text/javascript">
+  function exchange()
+  {
+    string1=document.getElementById("shuru").value;
+    string2=document.getElementById("shuru2").value;
+    
+    document.getElementById("change2").innerHTML=string1;
+    document.getElementById("change1").innerHTML=string2;
+  }
+</script>
+<button onclick="exchange()">交换</button>
+<br>
 
 
+<script type="text/javascript">
+  function omit()
+  {
+    string =document.getElementById("shuru").value;
+    for(i=0;i<5;i++)
+    {
+      string2=string.substring(6);
+      string3=string.replace(string2,"...");
+    }
+  document.getElementById("xianshi").innerHTML=string3;
+  }
+</script>
+<button onclick="omit()">省略</button>
+<br>
+
+
+<script type="text/javascript">
+  function compare()
+  {
+    string1=document.getElementById("shuru").value;
+    string2=document.getElementById("shuru2").value;
+    if (string1==string2) 
+      {
+        result=0;
+      }
+    else if(string1>string2)
+      {
+        result=1;
+      }
+    else
+      {
+        result=-1;
+      }
+    document.getElementById("xianshi").innerHTML=result;
+  }
+</script>
+<button onclick="compare()">比较</button>
 
 
 
