@@ -156,22 +156,31 @@
   {
     string1=document.getElementById("shuru").value;
     string2=document.getElementById("shuru2").value;
-    if (string1==string2) 
-      {
+
+
+    for(i=0;i<string1.length && i<string2.length;i++)
+    {
+      if (string1[i]='\0')
+       {
         result=0;
-      }
-    else if(string1>string2)
-      {
+       }
+       if(string1[i]-string2[i]>0)
+       {
         result=1;
-      }
-    else
-      {
+       }
+       else
+       {
         result=-1;
-      }
+       }
+    }
     document.getElementById("xianshi").innerHTML=result;
   }
 </script>
 <button onclick="compare()">比较</button>
+
+
+
+
 
 
 
