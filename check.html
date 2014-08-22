@@ -40,13 +40,17 @@
 </table>
 <br>
 
-
-
 <script type="text/javascript">
+  function spaceString(string)
+  {
+    string2=string.replace(/ /g,"");
+    return string2;
+  }
+
   function removespace()
   {
-    youspace=document.getElementById("shuru").value;
-    wuspace=youspace.replace(/ /g,"");
+    string=document.getElementById("shuru").value;
+    wuspace=spaceString(string)
     document.getElementById("xianshi").innerHTML=wuspace;
   }
 </script>
@@ -54,15 +58,22 @@
 <br>
 
 
+
 <script type="text/javascript">
+  function reverseString(string)
+  {
+    string2="";
+    for(i=string.length-1;i>=0;i--)
+    {
+     string2=string2+string2[i];
+    }
+    return string2;
+  }
+
   function reverse()
   {
-    order=document.getElementById("shuru").value;
-    fanzhuan="";
-    for(i=order.length-1;i>=0;i--)
-    {
-     fanzhuan=fanzhuan+order[i];
-    }
+    string=document.getElementById("shuru").value;
+    fanzhuan=reverseString(string);
     document.getElementById("xianshi").innerHTML=fanzhuan;
   }
 </script>
@@ -70,10 +81,10 @@
 <br>
 
 
+
 <script type="text/javascript"> 
-  function findmode()
+  function modeString(string)
   {
-    string =document.getElementById("shuru").value;   
     number = 0;  
     mode = "";     
     for(i=0;i<string.length;i++)
@@ -85,22 +96,29 @@
           {        
           number = oldstring.length-string.length; 
           //number是多少，就说明相同的字母有多少             
-          mode = letter + "=" + number;    
+          appear = letter + "=" + number;    
           }   
       }     
-    document.getElementById("xianshi").innerHTML=mode; 
+    return appear; 
   }   
-</script>  
+
+  function findmode()
+  {
+     string=document.getElementById("shuru").value;
+     mode=modeString(string);
+     document.getElementById("xianshi").innerHTML=mode;
+  }
+</script>
 <button onclick="findmode()">出现次数最多的</button>
 <br>
 
 
+
 <script type="text/javascript"> 
-  function removerepeat()
+  function repeatString(string)
   {
-    string =document.getElementById("shuru").value;   
     repeat = 0;  
-    newstring = ""; 
+    string2 = ""; 
     str=string;    
     for(i=0;i<string.length;i++)
       {   
@@ -111,44 +129,70 @@
           {        
             repeat = oldstring.length-string.length; 
             munber = letter + "=" + repeat; 
-            eval("newstring = str.replace(/"+letter+"/g,'')"); 
+            eval("string2 = str.replace(/"+letter+"/g,'')"); 
           }   
       }
-    document.getElementById("xianshi").innerHTML=newstring; 
+    return string2; 
   }   
-</script>   
+
+  function removerepeat()
+  {
+    string=document.getElementById("shuru").value;
+    newstring=repeatString(string);
+    document.getElementById("xianshi").innerHTML=newstring;   
+  }
+</script>  
 <button onclick="removerepeat()">去除重复的字符</button>
 <br>
 
 
+
 <script type="text/javascript">
+  function exchangeString(string1,string2)
+  {
+   string=new Array(2)
+   string[0]=string1;
+   string[1]=string2;
+   return string;
+  }
+
   function exchange()
   {
     string1=document.getElementById("shuru").value;
     string2=document.getElementById("shuru2").value;
-    
-    document.getElementById("change2").innerHTML=string1;
-    document.getElementById("change1").innerHTML=string2;
+
+    result=exchangeString(string1,string2)
+
+    document.getElementById("change2").innerHTML=string[0];
+    document.getElementById("change1").innerHTML=string[1];
   }
 </script>
 <button onclick="exchange()">交换</button>
 <br>
 
 
+
 <script type="text/javascript">
+  function omitString(string)
+  {
+    for(i=0;i<5;i++)
+    {
+      before=string.substring(6);
+      after=string.replace(string2,"...");
+    }
+  return after;
+  }
+
   function omit()
   {
     string=document.getElementById("shuru").value;
-    for(i=0;i<5;i++)
-    {
-      string2=string.substring(6);
-      string3=string.replace(string2,"...");
-    }
-  document.getElementById("xianshi").innerHTML=string3;
+    string2=omitString(string);
+    document.getElementById("xianshi").innerHTML=string2;   
   }
 </script>
 <button onclick="omit()">省略</button>
 <br>
+
 
 
 <script type="text/javascript">
@@ -174,10 +218,9 @@
       {
         result = 0;
       }
-
-      // 当前面的字符都相同，如果遍历到某一个字符串的结尾字符，比较两个字符串的长度
+    // 当前面的字符都相同，如果遍历到某一个字符串的结尾字符，比较两个字符串的长度
         // 若前面字符都相同，长度长的字符串更大
-      if(i == string1.length-1 || i==string2.length-1) 
+      if(i == string1.length-1 || i == string2.length-1) 
       {
         if (string1.length > string2.length) 
         {
@@ -196,14 +239,12 @@
     }
     return result;
   }
-</script>
 
-<script type="text/javascript">
   function compare()
   {
     string1 = document.getElementById("shuru").value;
     string2 = document.getElementById("shuru2").value;
-    compareString(string1, string2);
+    result=compareString(string1, string2);
     document.getElementById("xianshi").innerHTML=result;
   }
 </script>
