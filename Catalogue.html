@@ -1,6 +1,6 @@
 <html>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<script src="file:///E:/%E9%99%88%E6%98%B1%E7%AB%B9/workspace/firstpage/jquery-1.11.1.min.js"></script>
+<script src="/%E9%99%88%E6%98%B1%E7%AB%B9/workspace/firstpage/jquery-1.11.1.min.js"></script>
 <body>
 
   <style type="text/css">
@@ -11,15 +11,15 @@
     function date(buttonTextContent)//形式参数
     {
     buttonDate=buttonTextContent;//把按钮上的值赋给buttonDate
-    a=self.parent.frames["right"];
-    b=a.frames["up"];
-    c=b.contentDocument;
+    //a=self.parent.frames["right"];
+    //b=a.frames["up"];
+    //c=b.contentDocument;
 
 
     pageDate=buttonDate.replace(".","").replace(".","");
     pageName=pageDate+".html"; 
 
-    self.parent.frames["right"].frames["down"].location=pageName;
+    self.parent.frames["right"].location=pageName;
     
     //引用右边的框架，并显示网页
     }
@@ -98,9 +98,27 @@
     <br>
     <button onclick="date(this.textContent)">2014.8.5</button>
     <br>
-    <button onclick="date(this.textContent)">2014.8.6</button>
-    <br>
   </div3>
+  <br>
+
+  <button id="b4">+</button>
+  <b>CSS</b>
+  <br>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $("#b4").click(function(){
+        $("div4").slideToggle(1000);
+      });
+    });
+  </script>
+
+  <div4 style="display:none;">
+    <button onclick="date(this.textContent)">2014.8.26</button>
+    <br>
+
+  </div4>
+
+
 
 </body>
 </html>
