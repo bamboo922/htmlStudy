@@ -1,6 +1,6 @@
 <html>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<script src="./jquery-1.11.1.min.js"></script>
+<script src="./StudyNote/jquery-1.11.1.min.js"></script>
 <body>
 
   <style type="text/css">
@@ -11,15 +11,11 @@
     function date(buttonTextContent)//形式参数
     {
     buttonDate=buttonTextContent;//把按钮上的值赋给buttonDate
-    //a=self.parent.frames["right"];
-    //b=a.frames["up"];
-    //c=b.contentDocument;
-
-
     pageDate=buttonDate.replace(".","").replace(".","");
-    pageName=pageDate+".html"; 
+    pageName=pageDate+".html";
 
-    self.parent.frames["right"].location=pageName;
+    self.parent.frames["right"].location="./StudyNote/" + pageName;
+   
     
     //引用右边的框架，并显示网页
     }
@@ -116,6 +112,8 @@
     <button onclick="date(this.textContent)">2014.8.26</button>
     <br>
     <button onclick="date(this.textContent)">2014.8.28</button>
+    <br>
+    <button onclick="date(this.textContent)">2014.8.29</button>
     <br>
   </div4>
 
